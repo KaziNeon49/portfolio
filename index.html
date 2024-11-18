@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="profile-info">
+                <img src="neon.png" alt="Profile Picture" class="profile-picture">
+                <h2>Kazi Rashadul Haque Neon</h2>
+                <p>Student</p>
+            </div>
+            <ul class="nav-list">
+                <li><a href="#personal-info" class="nav-item" onclick="showSection('personal-info')">Personal Info</a></li>
+                <li><a href="#profile-summary" class="nav-item" onclick="showSection('profile-summary')">Profile Summary</a></li>
+                <li><a href="#Activities" class="nav-item" onclick="showSection('Activities')">Activities</a></li>
+                <li><a href="#skills" class="nav-item" onclick="showSection('skills')">Skills</a></li>
+                <li><a href="#contact" class="nav-item" onclick="showSection('contact')">Contact</a></li>
+            </ul>
+        </aside>
+
+        <main class="main-content">
+            <header id="dashboard" class="main-header" style="display: none;">
+                <!-- Dashboard content -->
+            </header>
+
+            <section id="personal-info" class="info-section card personal-info" style="display: block;">
+                <h2>Personal Info</h2>
+                <p><strong>Full Name:</strong> Kazi Rashadul Haque Neon</p>
+                <p><strong>Email:</strong> <a href="mailto:rashadul.stu2019@juniv.edu">rashadul.stu2019@juniv.edu</a></p>
+                <p><strong>Contact Number:</strong> 01769306012</p>
+                <p><strong>Date of Birth:</strong> 05/07/2000</p>
+            </section>
+
+            <section id="profile-summary" class="info-section card profile-summary" style="display: none;">
+                <img src="neon.png" alt="Profile Picture" class="profile-summary-picture">
+                <h2>Kazi Rashadul Haque</h2>
+                <p><strong>Role:</strong> Student at Jahangirnagar University</p>
+                <p><strong>Department:</strong> CSE</p>
+                <p><strong>Location:</strong> Jahangirnagar University,Savar</p>
+                <p><strong>About :</strong> Student.</p>
+                <p><strong>School:</strong> Dinajpur Zilla School</p>
+                <p><strong>College:</strong> Dinajpur Government College.</p>
+                <p><strong>Favourite Game:</strong> Football.</p>
+
+
+            </section>
+
+            <section id="Activities" class="info-section card" style="display: none;">
+                <h2>Projects</h2>
+                <p><strong>Project 1:</strong> Online Supershop management system.</p>
+                <p><strong>Project 2:</strong> Online train management system.</p>
+                <p><strong>Football:</strong> 
+                    <ul>
+                        <li>Champion at Newtown Football Tournament,Dinajpur</li>
+                        <li>Champion at 9NO Ward counsilor Football Tournament,Dinajpur</li>
+                        <li>Runners-up at CSE premier League,Jahangirnagar University</li>
+                    </ul></p>
+                    <p><strong>Cricket:</strong> 
+                        <ul>
+        
+                            <li>Champion at 9NO.ward counsilor Cricket Tournament,Dinajpur</li>
+                            
+                        </ul></p>
+                    <p><strong>Volleyball:</strong> 
+                            <ul>
+                                <li>Champion at Panel meyor Gold Cup Volleyball Tournament,Dinajpur</li>
+                                
+                                <li>Runners-up at DC Cup Volleyball tournament,Dinajpur</li>
+                            </ul></p>    
+                
+
+            </section>
+
+            <section id="skills" class="info-section card" style="display: none;">
+                <h2>Skills</h2>
+                <ul>
+                    <li>HTML & CSS</li>
+                    <li>JavaScript</li>
+                    <li>Python</li>
+                    <li>Java</li>
+                    <li>c,c++</li>
+                    <li>Public Speaking</li>
+                </ul>
+                <h2>Game</h2>
+                <uL>
+                    <li>Football</li>
+                    <li>Cricket</li>
+                    <li>Volleyball</li>
+                    <li>Badminton</li>
+                    <li>pool</li>
+                </uL>
+            
+
+            
+               
+
+            </section>
+
+            <section id="contact" class="info-section card" style="display: none;">
+                <h2>Contact</h2>
+                <p><strong>Email:</strong> <a href="mailto:rashadul.stu2019@juniv.edu">rashadul.stu2019@juniv.edu</a></p>
+                <p><strong>Phone:</strong> 01769306012</p>
+                <p><strong>Telegram:</strong> 01769306012</p>
+                <p><strong>Whatsapp:</strong> 01769306012</p>
+            
+            </section>
+        </main>
+    </div>
+
+    <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            document.querySelectorAll('.info-section').forEach(section => {
+                section.style.display = 'none';
+            });
+
+            // Hide dashboard header
+            document.getElementById('dashboard').style.display = 'none';
+
+            // Show the selected section
+            document.getElementById(sectionId).style.display = 'block';
+        }
+    </script>
+</body>
+</html>
